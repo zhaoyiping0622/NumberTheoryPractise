@@ -1,3 +1,4 @@
+// YY的GCD
 // 莫比乌斯反演
 // https://www.luogu.com.cn/problem/P2257
 #include <bits/stdc++.h>
