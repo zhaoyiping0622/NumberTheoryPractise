@@ -1,6 +1,13 @@
 // 【UR #13】Sanrd
 // min25筛
 // https://uoj.ac/problem/188
+/*
+S(x,y) 表示[1,x]中最小质因数大于等于Prime[y]的值对答案的贡献
+枚举大于等于Prime[y]的质数Prime[i]，以及其幂次e，其对S(x,y)的贡献是
+S(x/(Prime[i]**e),i+1)+Prime[i]*(\phi[x/(Prime[i]**e)]-i+1)
+\phi[x] 表示小于等于x质数的个数
+前半部分是去除了这个因子后的答案，后半部分是最小质因数是Prime[i]，且Prime[i]能对答案做出贡献的值的数目
+ */
 #include <bits/stdc++.h>
 using namespace std;
 const int MAXN = 1e6 + 5;
@@ -62,8 +69,5 @@ int main() {
   long long l, r;
   cin >> l >> r;
   cout << cal(r) - cal(l - 1) << endl;
-  // long long n;
-  // cin >> n;
-  // cout << cal(n) << endl;
   return 0;
 }
