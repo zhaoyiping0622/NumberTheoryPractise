@@ -1,3 +1,6 @@
+// 梦中的数论
+// min25筛
+// https://loj.ac/problem/6682
 #include <bits/stdc++.h>
 using namespace std;
 const int MAXN = 1e6 + 5;
